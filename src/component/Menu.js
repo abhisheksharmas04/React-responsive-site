@@ -6,10 +6,11 @@ import Sales from './Sales'
 import ServiceCloud from './Servicecloud'
 import Cpql from './Cpql'
 import Heroq from './Heroku'
+import Home from "./Home";
 
 function Menus() {
 
-
+    const HOME_PAGE = "/"
     const ABOUT_US_PAGE = "/aboutUS";
     const CONTANCT_US_PAGE = "/contactUs"
     const SALES_CLOUD_PAGE = "/salesCloud";
@@ -19,7 +20,7 @@ function Menus() {
 
 
     return (
-        <BrowserRouter>
+        <div className="container-fluid">
             <nav id="navbar" className="navbar">
                 <header id="header" className="d-flex align-items-center">
                     <div className="container d-flex align-items-center">
@@ -53,13 +54,14 @@ function Menus() {
             </nav>
             <Routes>
                 <Route path={ABOUT_US_PAGE} element={<AboutUs />}></Route>
-                <Route path={CONTANCT_US_PAGE} element={<Contact />}></Route>
+                
                 <Route path={SALES_CLOUD_PAGE} element={<Sales />}></Route>
                 <Route path={SERVICE_CLOUD_PAGE} element={<ServiceCloud />}></Route>
                 <Route path={CPQL_PAGE} element={<Cpql />}></Route>
                 <Route path={HEROKU_PAGE} element={<Heroq />}></Route>
             </Routes>
-        </BrowserRouter>
+        </div>
+
     );
 }
 

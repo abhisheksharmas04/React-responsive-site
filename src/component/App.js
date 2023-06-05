@@ -6,13 +6,12 @@ import '../assets/vendor/bootstrap-icons/bootstrap-icons.css'
 import '../assets/vendor/boxicons/css/boxicons.min.css'
 import '../assets/vendor/glightbox/css/glightbox.min.css'
 import '../assets/vendor/swiper/swiper-bundle.min.css'
-import TopBar from './TopBar'
-import Header from './Header'
-import Home from './Home'
+import AppRouter from './AppRouter'
 
 function App() {
   return (
-    <div className='container'>
+    <div className='container-fluid'>
+      <AppRouter/>
     </div>
   );
 }
